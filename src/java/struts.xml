@@ -1,0 +1,24 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <include file="example.xml"/>
+    <package name="default" extends="struts-default">
+        <action name="displayListBook" class="controller.BookActionSupport" method="getList">
+            <result name="success">listBook.jsp</result>
+        </action>  
+        <action name="add" class="controller.BookActionSupport" method="add">
+            <result name="success">index.jsp</result>
+        </action>  
+        <action name="delete" class="controller.BookActionSupport" method="del">
+            <result name="success">index.jsp</result>
+        </action>  
+        <action name="update" class="controller.BookActionSupport" method="update">
+            <result name="success">index.jsp</result>
+        </action> 
+            <action name="find" class="controller.BookActionSupport" method="find">
+            <result name="success">updateBook.jsp</result>
+        </action> 
+    </package>
+</struts>
